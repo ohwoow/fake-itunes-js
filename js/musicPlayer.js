@@ -108,4 +108,13 @@ export const musicPlayerInit = function () {
     audioPlayer.currentTime = progress
   })
 
+
+  musicPlayerInit.stop = () => {
+    if (!audioPlayer.paused) {
+      audioPlayer.pause()
+      audioButtonPlay.classList.add('fa-play')
+      audio.classList.remove('play')
+      audioButtonPlay.classList.remove('fa-pause')
+    }
+  }
 }

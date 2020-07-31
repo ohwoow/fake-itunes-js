@@ -1,4 +1,6 @@
-import { addZero } from './supScript.js'
+import {
+  addZero
+} from './supScript.js'
 
 export const videoPlayerInit = function () {
 
@@ -71,4 +73,14 @@ export const videoPlayerInit = function () {
     videoPlayer.currentTime = (value * duration) / 100
 
   })
+
+  videoPlayerInit.stop = () => {
+    if (!videoPlayer.paused) {
+
+      if (!videoPlayer.paused) {
+        stopPlay()
+      }
+
+    }
+  }
 }
